@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content:left;
+            align-items: center;
+            height: 100px;
+            margin: 10px;
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+
+        .navigation {
+            display: flex;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }    
+
+        .nav-link {
+            color: #333;
+            padding: 10px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease; 
+        }
+        
+        .nav-link:hover {
+            background-color: orange;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+        <p class="nav-link">HOME</p>
+        <p class="nav-link">ABOUT</p>
+        <p class="nav-link">CONTACT</p>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Menu</title>
+    <style>
+        .menu-container {
+            position: relative;
+            display: inline-block; 
+        }
+
+        .menu-button {
+            background-color: oklab(56.901999999999994% -0.06219 -0.11952); 
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 8px; 
+            cursor: pointer;
+            font-size: 16px;
+           
+        }
+
+        .menu-button:hover,
+        .menu-button:focus {
+            background-color: hsl(232, 71%, 25%); 
+        }
+
+        .popout-menu {
+            display: none;
+            position: absolute;
+            background-color: hsl(0, 0%, 94%);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 8px;
+            top: 100%; 
+            left: 0;
+            margin-top: 5px;
+        }
+
+        .menu-container:hover .popout-menu,
+        .menu-container:focus-within .popout-menu {
+            display: block;
+        }
+
+        .menu-item {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-item:hover,
+        .menu-item:focus {
+            background-color: hsl(0, 0%, 76%); /* Light gray on hover/focus */
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <button class="menu-button">MENU</button>
+      <div class="popout-menu">
+        <a href="#" class="menu-item">home</a>
+        <a href="#" class="menu-item">about</a>
+        <a href="#" class="menu-item">contact</a>
+      </div>
+    </div>
+</body>
+</html>
